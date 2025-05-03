@@ -1,0 +1,189 @@
+﻿{
+  "HeaderInfo": {
+    "AssemblyVersion": "1.4.13.0",
+    "BaseSiteId": 13189,
+    "Server": "http://localhost",
+    "CreatorName": "Administrator",
+    "PackageTime": "2025-04-09T10:04:19.6907436+09:00",
+    "Convertors": [
+      {
+        "SiteId": 13189,
+        "SiteTitle": "サーバスクリプト実行条件調査用",
+        "ReferenceType": "Results",
+        "IncludeData": false
+      }
+    ],
+    "IncludeSitePermission": true,
+    "IncludeRecordPermission": true,
+    "IncludeColumnPermission": true,
+    "IncludeNotifications": true,
+    "IncludeReminders": true
+  },
+  "Sites": [
+    {
+      "TenantId": 1,
+      "SiteId": 13189,
+      "Title": "サーバスクリプト実行条件調査用",
+      "SiteName": "",
+      "SiteGroupName": "",
+      "Body": "",
+      "GridGuide": "",
+      "EditorGuide": "",
+      "CalendarGuide": "",
+      "CrosstabGuide": "",
+      "GanttGuide": "",
+      "BurnDownGuide": "",
+      "TimeSeriesGuide": "",
+      "AnalyGuide": "",
+      "KambanGuide": "",
+      "ImageLibGuide": "",
+      "ReferenceType": "Results",
+      "ParentId": 982,
+      "InheritPermission": 13189,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Results",
+        "GridEditorType": 10,
+        "HistoryOnGrid": true,
+        "Columns": [
+          {
+            "ColumnName": "Status",
+            "AllowBulkUpdate": true
+          }
+        ],
+        "ServerScripts": [
+          {
+            "Title": "サイト設定の読み込み時",
+            "Name": "",
+            "WhenloadingSiteSettings": true,
+            "Body": "context.Log('-------------------------');\ncontext.Log('条件：サイト設定の読み込み時');\ncontext.Log('context.Action：' + context.Action);\ncontext.Log('-------------------------');",
+            "Id": 1
+          },
+          {
+            "Title": "ビュー処理時",
+            "Name": "",
+            "WhenViewProcessing": true,
+            "Body": "context.Log('-------------------------');\ncontext.Log('条件：ビュー処理時');\ncontext.Log('context.Action：' + context.Action);\ncontext.Log('-------------------------');",
+            "Id": 2
+          },
+          {
+            "Title": "レコード読み込み時",
+            "Name": "",
+            "WhenloadingRecord": true,
+            "Body": "context.Log('-------------------------');\ncontext.Log('条件：レコード読み込み時');\ncontext.Log('context.Action：' + context.Action);\ncontext.Log('-------------------------');",
+            "Id": 3
+          },
+          {
+            "Title": "計算式の前",
+            "Name": "",
+            "BeforeFormula": true,
+            "Body": "context.Log('-------------------------');\ncontext.Log('条件：計算式の前');\ncontext.Log('context.Action：' + context.Action);\ncontext.Log('-------------------------');",
+            "Id": 4
+          },
+          {
+            "Title": "計算式の後",
+            "Name": "",
+            "AfterFormula": true,
+            "Body": "context.Log('-------------------------');\ncontext.Log('条件：計算式の後');\ncontext.Log('context.Action：' + context.Action);\ncontext.Log('-------------------------');",
+            "Id": 5
+          },
+          {
+            "Title": "作成前",
+            "Name": "",
+            "BeforeCreate": true,
+            "Body": "context.Log('-------------------------');\ncontext.Log('条件：作成前');\ncontext.Log('context.Action：' + context.Action);\ncontext.Log('-------------------------');",
+            "Id": 6
+          },
+          {
+            "Title": "作成後",
+            "Name": "",
+            "AfterCreate": true,
+            "Body": "context.Log('-------------------------');\ncontext.Log('条件：作成後');\ncontext.Log('context.Action：' + context.Action);\ncontext.Log('-------------------------');",
+            "Id": 7
+          },
+          {
+            "Title": "更新前",
+            "Name": "",
+            "BeforeUpdate": true,
+            "Body": "context.Log('-------------------------');\ncontext.Log('条件：更新前');\ncontext.Log('context.Action：' + context.Action);\ncontext.Log('-------------------------');",
+            "Id": 8
+          },
+          {
+            "Title": "更新後",
+            "Name": "",
+            "AfterUpdate": true,
+            "Body": "context.Log('-------------------------');\ncontext.Log('条件：更新後');\ncontext.Log('context.Action：' + context.Action);\ncontext.Log('-------------------------');",
+            "Id": 9
+          },
+          {
+            "Title": "削除前",
+            "Name": "",
+            "BeforeDelete": true,
+            "Body": "context.Log('-------------------------');\ncontext.Log('条件：削除前');\ncontext.Log('context.Action：' + context.Action);\ncontext.Log('-------------------------');",
+            "Id": 10
+          },
+          {
+            "Title": "削除後",
+            "Name": "",
+            "AfterDelete": true,
+            "Body": "context.Log('-------------------------');\ncontext.Log('条件：削除後');\ncontext.Log('context.Action：' + context.Action);\ncontext.Log('-------------------------');",
+            "Id": 11
+          },
+          {
+            "Title": "画面表示の前",
+            "Name": "",
+            "BeforeOpeningPage": true,
+            "Body": "context.Log('-------------------------');\ncontext.Log('条件：画面表示の前');\ncontext.Log('context.Action：' + context.Action);\ncontext.Log('-------------------------');",
+            "Id": 12
+          },
+          {
+            "Title": "行表示の前",
+            "Name": "",
+            "BeforeOpeningRow": true,
+            "Body": "context.Log('-------------------------');\ncontext.Log('条件：行表示の前');\ncontext.Log('context.Action：' + context.Action);\ncontext.Log('-------------------------');",
+            "Id": 13
+          },
+          {
+            "Title": "共有",
+            "Name": "",
+            "Shared": true,
+            "Body": "context.Log('-------------------------');\ncontext.Log('条件：共有');\ncontext.Log('context.Action：' + context.Action);\ncontext.Log('-------------------------');",
+            "Id": 14
+          }
+        ],
+        "AutoVerUpType": 2,
+        "AllowReferenceCopy": true,
+        "NoDisplayIfReadOnly": false,
+        "NotInheritPermissionsWhenCreatingSite": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": []
+    }
+  ],
+  "Data": [],
+  "Permissions": [
+    {
+      "SiteId": 13189,
+      "Permissions": [
+        {
+          "ReferenceId": 13189,
+          "DeptId": 0,
+          "GroupId": 0,
+          "UserId": 1,
+          "PermissionType": 511
+        }
+      ]
+    }
+  ],
+  "PermissionIdList": {
+    "DeptIdList": [],
+    "GroupIdList": [],
+    "UserIdList": [
+      {
+        "UserId": 1,
+        "LoginId": "Administrator"
+      }
+    ]
+  }
+}

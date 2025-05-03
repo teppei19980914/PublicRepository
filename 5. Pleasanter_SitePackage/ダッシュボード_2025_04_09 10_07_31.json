@@ -1,0 +1,880 @@
+﻿{
+  "HeaderInfo": {
+    "AssemblyVersion": "1.4.12.0",
+    "BaseSiteId": 13472696,
+    "Server": "https://pleasanter.net/fs",
+    "CreatorName": "浦田 哲平",
+    "PackageTime": "2025-04-09T01:07:23.0411645+00:00",
+    "Convertors": [
+      {
+        "SiteId": 13472696,
+        "SiteTitle": "ダッシュボード",
+        "ReferenceType": "Sites",
+        "IncludeData": false,
+        "Order": "[]"
+      },
+      {
+        "SiteId": 13472697,
+        "SiteTitle": "WBS",
+        "ReferenceType": "Issues",
+        "IncludeData": false
+      },
+      {
+        "SiteId": 13472698,
+        "SiteTitle": "バックログ",
+        "ReferenceType": "Results",
+        "IncludeData": false
+      },
+      {
+        "SiteId": 13472699,
+        "SiteTitle": "進捗確認用",
+        "ReferenceType": "Dashboards",
+        "IncludeData": false
+      },
+      {
+        "SiteId": 13472700,
+        "SiteTitle": "はじめに",
+        "ReferenceType": "Wikis",
+        "IncludeData": false
+      }
+    ],
+    "IncludeSitePermission": true,
+    "IncludeRecordPermission": true,
+    "IncludeColumnPermission": true,
+    "IncludeNotifications": false,
+    "IncludeReminders": false
+  },
+  "Sites": [
+    {
+      "TenantId": 1,
+      "SiteId": 13472696,
+      "Title": "ダッシュボード",
+      "SiteName": "",
+      "SiteGroupName": "",
+      "Body": "",
+      "GridGuide": "",
+      "EditorGuide": "",
+      "CalendarGuide": "",
+      "CrosstabGuide": "",
+      "GanttGuide": "",
+      "BurnDownGuide": "",
+      "TimeSeriesGuide": "",
+      "AnalyGuide": "",
+      "KambanGuide": "",
+      "ImageLibGuide": "",
+      "ReferenceType": "Sites",
+      "ParentId": 13157039,
+      "InheritPermission": 13472696,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Sites",
+        "NoDisplayIfReadOnly": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": []
+    },
+    {
+      "TenantId": 1,
+      "SiteId": 13472697,
+      "Title": "WBS",
+      "SiteName": "",
+      "SiteGroupName": "",
+      "Body": "",
+      "GridGuide": "",
+      "EditorGuide": "",
+      "CalendarGuide": "",
+      "CrosstabGuide": "",
+      "GanttGuide": "",
+      "BurnDownGuide": "",
+      "TimeSeriesGuide": "",
+      "AnalyGuide": "",
+      "KambanGuide": "",
+      "ImageLibGuide": "",
+      "ReferenceType": "Issues",
+      "ParentId": 13472696,
+      "InheritPermission": 13472696,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Issues",
+        "GridView": 1,
+        "GridColumns": [
+          "IssueId",
+          "Title",
+          "Owner",
+          "Status",
+          "StartTime",
+          "CompletionTime",
+          "NumA",
+          "DateA",
+          "DateB",
+          "NumB"
+        ],
+        "EditorColumnHash": {
+          "General": [
+            "IssueId",
+            "_Section-1",
+            "Title",
+            "Body",
+            "ClassB",
+            "_Section-2",
+            "StartTime",
+            "CompletionTime",
+            "NumA",
+            "_Section-3",
+            "DateA",
+            "DateB",
+            "NumB",
+            "_Section-4",
+            "Status",
+            "Manager",
+            "Owner",
+            "Comments"
+          ]
+        },
+        "SectionLatestId": 4,
+        "Sections": [
+          {
+            "Id": 1,
+            "LabelText": "作業情報",
+            "AllowExpand": true,
+            "Expand": true
+          },
+          {
+            "Id": 2,
+            "LabelText": "予定",
+            "AllowExpand": true,
+            "Expand": false
+          },
+          {
+            "Id": 3,
+            "LabelText": "実績",
+            "AllowExpand": true,
+            "Expand": false
+          },
+          {
+            "Id": 4,
+            "LabelText": "データ",
+            "AllowExpand": true,
+            "Expand": false
+          }
+        ],
+        "Columns": [
+          {
+            "ColumnName": "Title",
+            "LabelText": "タスク名"
+          },
+          {
+            "ColumnName": "StartTime",
+            "LabelText": "開始(予定)",
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "CompletionTime",
+            "LabelText": "完了(予定)",
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "NumA",
+            "LabelText": "予定日数",
+            "Unit": "day",
+            "EditorReadOnly": true
+          },
+          {
+            "ColumnName": "DateA",
+            "LabelText": "開始(実績)",
+            "EditorReadOnly": true,
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "DateB",
+            "LabelText": "完了(実績)",
+            "EditorReadOnly": true,
+            "DateTimeStep": 1
+          },
+          {
+            "ColumnName": "NumB",
+            "LabelText": "実績日数",
+            "Unit": "day",
+            "EditorReadOnly": true
+          },
+          {
+            "ColumnName": "Manager",
+            "NoWrap": true
+          },
+          {
+            "ColumnName": "NumC",
+            "LabelText": "日数予実差",
+            "Unit": "day",
+            "EditorReadOnly": true
+          },
+          {
+            "ColumnName": "ClassA",
+            "LabelText": "作業効率",
+            "ChoicesText": "1, 予定>実績, 良い\n2, 予定=実績, オンスケ\n3, 予定<実績, 悪し",
+            "EditorReadOnly": true,
+            "SearchType": "PartialMatch"
+          },
+          {
+            "ColumnName": "Status",
+            "EditorReadOnly": true
+          },
+          {
+            "ColumnName": "ClassB",
+            "LabelText": "プルリクエストURL",
+            "Anchor": true,
+            "OpenAnchorNewTab": true,
+            "AnchorFormat": "{Value}",
+            "FieldCss": "field-wide"
+          }
+        ],
+        "Aggregations": [
+          {
+            "Id": 2,
+            "GroupBy": "Owner",
+            "Type": 0,
+            "Target": ""
+          },
+          {
+            "Id": 1,
+            "GroupBy": "Status",
+            "Type": 0,
+            "Target": ""
+          }
+        ],
+        "Processes": [
+          {
+            "Id": 1,
+            "Name": "開始",
+            "DisplayName": "開始",
+            "CurrentStatus": 100,
+            "ChangedStatus": 200,
+            "View": {
+              "Id": 0,
+              "ColumnFilterHash": {
+                "Owner": "[\"Own\"]"
+              },
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "CalendarSiteId": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputDate",
+                "ColumnName": "DateA",
+                "Value": "0,Days",
+                "ValueFormulaNotUseDisplayName": false,
+                "ValueFormulaIsDisplayError": false
+              }
+            ]
+          },
+          {
+            "Id": 2,
+            "Name": "完了",
+            "DisplayName": "完了",
+            "CurrentStatus": 300,
+            "ChangedStatus": 900,
+            "View": {
+              "Id": 0,
+              "ColumnFilterHash": {
+                "Owner": "[\"Own\"]"
+              },
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "CalendarSiteId": 0,
+              "ApiDataType": 0
+            }
+          },
+          {
+            "Id": 3,
+            "Name": "プルリクエスト作成済",
+            "DisplayName": "プルリクエスト作成済",
+            "CurrentStatus": 200,
+            "ChangedStatus": 300,
+            "View": {
+              "Id": 0,
+              "ColumnFilterHash": {
+                "Owner": "[\"Own\"]"
+              },
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "CalendarSiteId": 0,
+              "ApiDataType": 0
+            },
+            "DataChanges": [
+              {
+                "Id": 1,
+                "Type": "InputDate",
+                "ColumnName": "DateB",
+                "Value": "0,Days",
+                "ValueFormulaNotUseDisplayName": false,
+                "ValueFormulaIsDisplayError": false
+              }
+            ]
+          }
+        ],
+        "StatusControls": [
+          {
+            "Id": 1,
+            "Name": "完了",
+            "Status": 900,
+            "ColumnHash": {
+              "StartTime": "ReadOnly",
+              "CompletionTime": "ReadOnly",
+              "Manager": "ReadOnly",
+              "Owner": "ReadOnly"
+            },
+            "View": {
+              "Id": 0,
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "CalendarSiteId": 0,
+              "ApiDataType": 0
+            }
+          }
+        ],
+        "ViewLatestId": 4,
+        "Views": [
+          {
+            "Id": 1,
+            "Name": "一覧",
+            "DefaultMode": "Index",
+            "BulkMoveTargetsCommand": 1,
+            "BulkDeleteCommand": 1,
+            "EditImportSettings": 1,
+            "OpenExportSelectorDialogCommand": 1,
+            "OpenBulkUpdateSelectorDialogCommand": 1,
+            "EditOnGridCommand": 1,
+            "OpenCopyDialogCommand": 1,
+            "ReferenceCopyCommand": 1,
+            "MoveTargetsCommand": 1,
+            "EditOutgoingMail": 1,
+            "DeleteCommand": 1,
+            "ColumnFilterHash": {
+              "Owner": "[\"Own\"]"
+            },
+            "ColumnSorterHash": {
+              "StartTime": "asc"
+            },
+            "ApiColumnKeyDisplayType": 0,
+            "ApiColumnValueDisplayType": 0,
+            "CalendarSiteId": 0,
+            "CalendarTimePeriod": "Monthly",
+            "CalendarFromTo": "StartTime-CompletionTime",
+            "CrosstabGroupByX": "Status",
+            "CrosstabGroupByY": "Owner",
+            "CrosstabAggregateType": "Total",
+            "CrosstabValue": "NumA",
+            "CrosstabTimePeriod": "Monthly",
+            "KambanAggregateType": "Total",
+            "ApiDataType": 0
+          },
+          {
+            "Id": 2,
+            "Name": "未着手",
+            "ColumnFilterHash": {
+              "Status": "[\"100\"]"
+            },
+            "ApiColumnKeyDisplayType": 0,
+            "ApiColumnValueDisplayType": 0,
+            "CalendarSiteId": 0,
+            "ApiDataType": 0
+          },
+          {
+            "Id": 3,
+            "Name": "実施中",
+            "ColumnFilterHash": {
+              "Status": "[\"200\"]"
+            },
+            "ApiColumnKeyDisplayType": 0,
+            "ApiColumnValueDisplayType": 0,
+            "CalendarSiteId": 0,
+            "ApiDataType": 0
+          },
+          {
+            "Id": 4,
+            "Name": "管理者",
+            "DefaultMode": "Index",
+            "BulkMoveTargetsCommand": 1,
+            "BulkDeleteCommand": 1,
+            "EditImportSettings": 1,
+            "OpenExportSelectorDialogCommand": 1,
+            "OpenBulkUpdateSelectorDialogCommand": 1,
+            "EditOnGridCommand": 1,
+            "OpenCopyDialogCommand": 1,
+            "ReferenceCopyCommand": 1,
+            "MoveTargetsCommand": 1,
+            "EditOutgoingMail": 1,
+            "DeleteCommand": 1,
+            "ColumnSorterHash": {
+              "StartTime": "asc"
+            },
+            "ApiColumnKeyDisplayType": 0,
+            "ApiColumnValueDisplayType": 0,
+            "CalendarSiteId": 0,
+            "CalendarTimePeriod": "Monthly",
+            "CalendarFromTo": "StartTime-CompletionTime",
+            "CrosstabGroupByX": "Status",
+            "CrosstabGroupByY": "Owner",
+            "CrosstabAggregateType": "Total",
+            "CrosstabValue": "NumA",
+            "CrosstabTimePeriod": "Monthly",
+            "KambanAggregateType": "Total",
+            "ApiDataType": 0
+          }
+        ],
+        "ServerScripts": [
+          {
+            "Title": "見出し「予定」「実績」内での処理",
+            "Name": "",
+            "BeforeCreate": true,
+            "BeforeUpdate": true,
+            "Body": "try {\n    context.Log('予定/実績工数の設定：開始');\n    const plannedStartTime = new Date(model.StartTime);\n    const plannedEndTime = new Date(model.CompletionTime);\n    const plannedDateDif = Math.floor((plannedEndTime - plannedStartTime) / (1000 * 60 * 60 * 24));\n    const actualStartTime = new Date(model.DateA);\n    const actualEndTime = new Date(model.DateB);\n    const actualDateDif = Math.floor((actualEndTime - actualStartTime) / (1000 * 60 * 60 * 24) + 1);\n    if (plannedDateDif <= 0) context.Error('「完了(予定)」を「開始(予定)」以降してください。');\n    if (plannedDateDif > 0 && (model.StartTime !== '' && model.CompletionTime !== '')) model.NumA = plannedDateDif;\n    if (actualDateDif > 0 && (model.DateA !== '' && model.DateB !== '')) model.NumB = actualDateDif;\n    context.Log('予定/実績工数の設定：終了');\n} catch (ex) {\n    context.Log(ex.stack);\n}\n",
+            "Id": 2
+          },
+          {
+            "Title": "見出し「データ」内での処理",
+            "Name": "",
+            "BeforeCreate": true,
+            "BeforeUpdate": true,
+            "Body": "try {\n    if (model.Status >= 900) {\n        context.Log('工数予実差の設定：開始');\n        const differencePlanAndActual = model.NumA - model.NumB;\n        if (differencePlanAndActual > 0) model.ClassA = 1;\n        if (differencePlanAndActual === 0) model.ClassA = 2;\n        if (differencePlanAndActual < 0) model.ClassA = 3;\n        context.Log('工数予実差の設定：終了');\n    }\n} catch (ex) {\n    context.Log(ex.stack);\n}\n",
+            "Id": 3
+          }
+        ],
+        "NoDisplayIfReadOnly": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": []
+    },
+    {
+      "TenantId": 1,
+      "SiteId": 13472698,
+      "Title": "バックログ",
+      "SiteName": "",
+      "SiteGroupName": "",
+      "Body": "",
+      "GridGuide": "",
+      "EditorGuide": "",
+      "CalendarGuide": "",
+      "CrosstabGuide": "",
+      "GanttGuide": "",
+      "BurnDownGuide": "",
+      "TimeSeriesGuide": "",
+      "AnalyGuide": "",
+      "KambanGuide": "",
+      "ImageLibGuide": "",
+      "ReferenceType": "Results",
+      "ParentId": 13472696,
+      "InheritPermission": 13472696,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Results",
+        "GridView": 3,
+        "GridEditorType": 10,
+        "GridColumns": [
+          "ClassC",
+          "Title",
+          "ClassA",
+          "Status",
+          "Manager",
+          "Owner"
+        ],
+        "EditorColumnHash": {
+          "General": [
+            "ClassC",
+            "Title",
+            "Body",
+            "Status",
+            "ClassA",
+            "ClassB",
+            "Manager",
+            "Owner",
+            "Comments"
+          ]
+        },
+        "Columns": [
+          {
+            "ColumnName": "ClassB",
+            "LabelText": "WBS",
+            "ChoicesText": "[[13472697]]",
+            "Hide": true,
+            "EditorReadOnly": true,
+            "Link": true,
+            "SearchType": "PartialMatch"
+          },
+          {
+            "ColumnName": "ClassA",
+            "LabelText": "進捗状況",
+            "ChoicesText": "0, 着手前, 未着\n1, 遅延, 遅\n2, オンスケジュール, オンスケ\n3, 前倒し, 前",
+            "NotInsertBlankChoice": true,
+            "SearchType": "PartialMatch"
+          },
+          {
+            "ColumnName": "ClassC",
+            "LabelText": "ID",
+            "AutoNumberingFormat": "[ClassB]-[NNN]",
+            "AutoNumberingResetType": "String",
+            "EditorReadOnly": true
+          },
+          {
+            "ColumnName": "Status",
+            "LabelText": "対応状況"
+          },
+          {
+            "ColumnName": "Title",
+            "LabelText": "作業名"
+          },
+          {
+            "ColumnName": "Manager",
+            "DefaultInput": "2085"
+          }
+        ],
+        "Links": [
+          {
+            "ColumnName": "ClassB",
+            "SiteId": 13472697
+          }
+        ],
+        "ViewLatestId": 3,
+        "Views": [
+          {
+            "Id": 3,
+            "Name": "一覧",
+            "DefaultMode": "Index",
+            "ColumnFilterHash": {
+              "Owner": "[\"Own\"]"
+            },
+            "ColumnSorterHash": {
+              "ClassC": "asc"
+            },
+            "ApiColumnKeyDisplayType": 0,
+            "ApiColumnValueDisplayType": 0,
+            "CalendarSiteId": 0,
+            "CalendarTimePeriod": "Monthly",
+            "CalendarFromTo": "DateA",
+            "CrosstabGroupByX": "Status",
+            "CrosstabGroupByY": "Owner",
+            "CrosstabAggregateType": "Total",
+            "CrosstabValue": "ClassB~13472697,NumA",
+            "CrosstabTimePeriod": "Monthly",
+            "KambanAggregateType": "Count",
+            "ApiDataType": 0
+          }
+        ],
+        "NoDisplayIfReadOnly": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": []
+    },
+    {
+      "TenantId": 1,
+      "SiteId": 13472699,
+      "Title": "進捗確認用",
+      "SiteName": "",
+      "SiteGroupName": "",
+      "Body": "",
+      "GridGuide": "",
+      "EditorGuide": "",
+      "CalendarGuide": "",
+      "CrosstabGuide": "",
+      "GanttGuide": "",
+      "BurnDownGuide": "",
+      "TimeSeriesGuide": "",
+      "AnalyGuide": "",
+      "KambanGuide": "",
+      "ImageLibGuide": "",
+      "ReferenceType": "Dashboards",
+      "ParentId": 13472696,
+      "InheritPermission": 13472696,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Dashboards",
+        "DashboardParts": [
+          {
+            "Id": 1,
+            "Title": "バックログ - 対応状況 -",
+            "ShowTitle": true,
+            "DisableAsynchronousLoading": false,
+            "Type": 5,
+            "X": 0,
+            "Y": 44,
+            "Width": 10,
+            "Height": 107,
+            "View": {
+              "Id": 0,
+              "GridColumns": [
+                "TitleBody",
+                "Comments",
+                "Updator",
+                "UpdatedTime"
+              ],
+              "ColumnFilterHash": {
+                "Owner": "[\"12068\",\"2085\",\"13490\",\"13865\",\"12454\"]",
+                "Status": "[\"100\",\"150\",\"200\",\"300\",\"900\",\"910\"]"
+              },
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "CalendarSiteId": 0,
+              "CalendarTimePeriod": "Monthly",
+              "CalendarFromTo": "StartTime-CompletionTime",
+              "KambanGroupByX": "Status",
+              "KambanGroupByY": "Owner",
+              "KambanAggregateType": "Count",
+              "KambanValue": "NumA",
+              "ApiDataType": 0
+            },
+            "TimeLineItemCount": 0,
+            "CalendarShowStatus": false,
+            "KambanSites": "13472698",
+            "KambanSitesData": [
+              "13472698"
+            ],
+            "KambanGroupByX": "Status",
+            "KambanGroupByY": "Owner",
+            "KambanAggregateType": "Count",
+            "KambanValue": "NumA",
+            "KambanColumns": "10",
+            "KambanAggregationView": false,
+            "KambanShowStatus": false,
+            "SiteId": 13472698,
+            "ExtendedCss": ""
+          },
+          {
+            "Id": 2,
+            "Title": "バックログ - 進捗状況 -",
+            "ShowTitle": true,
+            "DisableAsynchronousLoading": false,
+            "Type": 5,
+            "X": 10,
+            "Y": 44,
+            "Width": 10,
+            "Height": 107,
+            "View": {
+              "Id": 0,
+              "GridColumns": [
+                "TitleBody",
+                "Comments",
+                "Updator",
+                "UpdatedTime"
+              ],
+              "ColumnFilterHash": {
+                "Owner": "[\"12068\",\"2085\",\"13490\",\"13865\",\"12454\"]",
+                "Status": "[\"100\",\"150\",\"200\",\"300\"]"
+              },
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "CalendarSiteId": 0,
+              "CalendarTimePeriod": "Monthly",
+              "CalendarFromTo": "StartTime-CompletionTime",
+              "KambanGroupByX": "ClassA",
+              "KambanGroupByY": "Owner",
+              "KambanAggregateType": "Count",
+              "KambanValue": "NumA",
+              "ApiDataType": 0
+            },
+            "TimeLineItemCount": 0,
+            "CalendarShowStatus": false,
+            "KambanSites": "13472698",
+            "KambanSitesData": [
+              "13472698"
+            ],
+            "KambanGroupByX": "ClassA",
+            "KambanGroupByY": "Owner",
+            "KambanAggregateType": "Count",
+            "KambanValue": "NumA",
+            "KambanColumns": "10",
+            "KambanAggregationView": false,
+            "KambanShowStatus": false,
+            "SiteId": 13472698,
+            "ExtendedCss": ""
+          },
+          {
+            "Id": 3,
+            "Title": "WBS",
+            "ShowTitle": true,
+            "DisableAsynchronousLoading": false,
+            "Type": 5,
+            "X": 0,
+            "Y": 0,
+            "Width": 20,
+            "Height": 44,
+            "View": {
+              "Id": 0,
+              "GridColumns": [
+                "TitleBody",
+                "Comments",
+                "Updator",
+                "UpdatedTime"
+              ],
+              "ApiColumnKeyDisplayType": 0,
+              "ApiColumnValueDisplayType": 0,
+              "CalendarSiteId": 0,
+              "CalendarTimePeriod": "Monthly",
+              "CalendarFromTo": "StartTime-CompletionTime",
+              "KambanGroupByX": "Status",
+              "KambanGroupByY": "Owner",
+              "KambanAggregateType": "Count",
+              "KambanValue": "NumA",
+              "ApiDataType": 0
+            },
+            "TimeLineItemCount": 0,
+            "CalendarShowStatus": false,
+            "KambanSites": "13472697",
+            "KambanSitesData": [
+              "13472697"
+            ],
+            "KambanGroupByX": "Status",
+            "KambanGroupByY": "Owner",
+            "KambanAggregateType": "Count",
+            "KambanValue": "NumA",
+            "KambanColumns": "10",
+            "KambanAggregationView": false,
+            "KambanShowStatus": false,
+            "SiteId": 13472697,
+            "ExtendedCss": ""
+          },
+          {
+            "Id": 4,
+            "Title": "クイックアクセス",
+            "DisableAsynchronousLoading": false,
+            "Type": 0,
+            "X": 0,
+            "Y": 0,
+            "Width": 2,
+            "Height": 10,
+            "QuickAccessSites": "[\n    {\n        Title: \"WBS - ガントチャート -\",\n        Url: \"https://pleasanter.net/fs/items/13472697/gantt\",\n        OpenInNewTab: true\n    }\n]",
+            "TimeLineItemCount": 0,
+            "CalendarShowStatus": false,
+            "KambanAggregationView": false,
+            "KambanShowStatus": false,
+            "SiteId": 0,
+            "ExtendedCss": ""
+          }
+        ],
+        "NoDisplayIfReadOnly": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": []
+    },
+    {
+      "TenantId": 1,
+      "SiteId": 13472700,
+      "Title": "はじめに",
+      "SiteName": "",
+      "SiteGroupName": "",
+      "Body": "[md]\n# はじめに\nプロジェクトやフェーズを開始するにあたり**必ず**下記内容を一読してください。  \n\n# 内容\n\n## 各用語について\n\n本サイト　　　：WBSサイト配下  \n本ドキュメント：現在開かれている「はじめに」  \n\n## 目的\n本ドキュメントは本サイトの使い方/運用方法についてまとめます。  \n\n## 対象\n本サイトを利用してプロジェクトやフェーズのタスク管理をする各担当者と各管理者  \n\n## 運用方法\n\n### タスクの登録\n\n下記手順を参考に、「WBS」テーブルにレコードを登録してください。  \n\n#### 手順\n\n1. 「WBS」テーブルの一覧画面にアクセス  \n2. 画面左上の「+」をクリック  \n3. 新規作成画面に遷移後、下記設定内容を参考に値を設定  \n4. 画面下部「作成」をクリック  \n\n##### 設定内容\n\n|見出し名|項目名|内容|設定例|備考|\n|:----|:----|:----|:----|:----|\n|作業情報|タスク名|タスク名を設定してください。|実装|-|\n|予定|開始(予定)|開始予定を設定してください。|2025/03/28 09:00|「YYYY/mm/DD hh:MM」形式で入力|\n|予定|完了(予定)|完了予定を設定してください。|2025/03/28 12:00|「YYYY/mm/DD hh:MM」形式で入力|\n|データ|管理者|担当者の管理者を設定してください。|-|-|\n|データ|担当者|該当タスクを実施する担当者を設定してください。|-|-|\n\n### 作業の登録\n\n下記手順を参考に、「バックログ」テーブルにレコードを登録してください。  \n**より細かい作業を登録することをお勧めします。**  \n\n#### 手順\n\n1. 上記「タスクの登録」で登録した該当タスクの編集画面にアクセス  \n2. 画面中央下部「+ バックログ」をクリック  \n3. 新規作成画面に遷移後、下記設定内容を参考に値を設定  \n4. 画面下部「作成」をクリック  \n\n##### 設定内容\n\n|項目名|内容|設定例|備考|\n|:----|:----|:----|:----|\n|作業名|作業名を設定してください。|実装|-|\n|管理者|担当者の管理者を設定してください。|-|-|\n|担当者|該当タスクを実施する担当者を設定してください。|-|-|\n\n### タスクの開始\n\n下記手順を参考に、「WBS」テーブルの該当レコードを更新してください。  \n\n#### 手順\n\n1. 該当タスク編集画面にアクセス  \n2. 画面下部「開始」をクリック  \n\n### 作業の開始\n\n下記手順を参考に、「バックログ」テーブルの該当レコードを更新してください。  \n\n#### 手順\n\n1. 該当タスク編集画面にアクセス  \n2. 画面中央下部「リンクテーブル」から該当作業をクリック  \n3. 編集画面に遷移後、下記設定内容を参考に値を設定  \n4. 画面下部「更新」をクリック  \n\n##### 設定内容\n\n|項目名|内容|設定例|備考|\n|:----|:----|:----|:----|\n|対応状況|現在の対応状況を設定してください。|実施中|作業実施中の対応状況を管理する項目|\n|進捗状況|現在の進捗状況を設定してください。|オンスケジュール|作業実施中の進捗状況を管理する項目|\n\n**作業を更新する場合は、随時上記「対応状況」と「進捗状況」を更新してください。**  \n\n### タスクの完了\n\n1. 該当タスク編集画面にアクセス  \n2. 画面下部「完了」をクリック  \n\n### 作業進捗状況の確認\n\n「ダッシュボード」の一覧画面から視覚的に確認が可能です。  ",
+      "GridGuide": "",
+      "EditorGuide": "",
+      "CalendarGuide": "",
+      "CrosstabGuide": "",
+      "GanttGuide": "",
+      "BurnDownGuide": "",
+      "TimeSeriesGuide": "",
+      "AnalyGuide": "",
+      "KambanGuide": "",
+      "ImageLibGuide": "",
+      "ReferenceType": "Wikis",
+      "ParentId": 13472696,
+      "InheritPermission": 13472696,
+      "SiteSettings": {
+        "Version": 1.017,
+        "ReferenceType": "Wikis",
+        "NoDisplayIfReadOnly": false
+      },
+      "Publish": false,
+      "DisableCrossSearch": false,
+      "Comments": [],
+      "WikiId": 13472701
+    }
+  ],
+  "Data": [],
+  "Permissions": [
+    {
+      "SiteId": 13472696,
+      "Permissions": [
+        {
+          "ReferenceId": 13472696,
+          "DeptId": 0,
+          "GroupId": 0,
+          "UserId": 2085,
+          "PermissionType": 31
+        },
+        {
+          "ReferenceId": 13472696,
+          "DeptId": 0,
+          "GroupId": 0,
+          "UserId": 12068,
+          "PermissionType": 31
+        },
+        {
+          "ReferenceId": 13472696,
+          "DeptId": 0,
+          "GroupId": 0,
+          "UserId": 12454,
+          "PermissionType": 511
+        },
+        {
+          "ReferenceId": 13472696,
+          "DeptId": 0,
+          "GroupId": 0,
+          "UserId": 13490,
+          "PermissionType": 31
+        },
+        {
+          "ReferenceId": 13472696,
+          "DeptId": 0,
+          "GroupId": 0,
+          "UserId": 13865,
+          "PermissionType": 31
+        }
+      ]
+    },
+    {
+      "SiteId": 13472697,
+      "Permissions": []
+    },
+    {
+      "SiteId": 13472698,
+      "Permissions": []
+    },
+    {
+      "SiteId": 13472699,
+      "Permissions": []
+    },
+    {
+      "SiteId": 13472700,
+      "Permissions": []
+    }
+  ],
+  "PermissionIdList": {
+    "DeptIdList": [],
+    "GroupIdList": [],
+    "UserIdList": [
+      {
+        "UserId": 2085,
+        "LoginId": "8780373f-0370-4759-a4b3-ea989751e6da"
+      },
+      {
+        "UserId": 12068,
+        "LoginId": "e1d1eb7a-17d2-452e-9998-9ecafd130606"
+      },
+      {
+        "UserId": 12454,
+        "LoginId": "5886e885-28a5-4db9-a67f-9f0756d42019"
+      },
+      {
+        "UserId": 13490,
+        "LoginId": "f0b55a03-037f-4f04-b839-7bd122671c34"
+      },
+      {
+        "UserId": 13865,
+        "LoginId": "64129aa5-6e3b-4ea7-bb2a-9990dd685687"
+      }
+    ]
+  }
+}
